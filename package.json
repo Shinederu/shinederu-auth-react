@@ -19,8 +19,10 @@
     "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "react": ">=18",
-    "@shinederu/auth-core": ">=0.1.0"
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@shinederu/auth-core": "git+https://github.com/Shinederu/shinederu-auth-core.git"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",
