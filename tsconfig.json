@@ -1,0 +1,20 @@
+﻿{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@shinederu/auth-core": ["../shinederu-auth-core/src/index.ts"]
+    },
+    "noEmitOnError": true
+  },
+  "include": ["src"]
+}
