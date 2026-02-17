@@ -16,6 +16,7 @@ import { AuthProvider } from "@shinederu/auth-react";
 
 const authClient = createAuthClient({
   baseUrl: "https://api.shinederu.lol/auth/index.php",
+  defaultCredentials: "include",
 });
 
 export function Providers({ children }: { children: React.ReactNode }) {
@@ -28,8 +29,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
 ```tsx
 import { useAuth } from "@shinederu/auth-react";
 
-export function ProfileButton() {
-  const { user, isAuthenticated, login, logout } = useAuth();
+function AccountButton() {
+  const { isAuthenticated, user, login, logout } = useAuth();
 
   if (!isAuthenticated) {
     return <button onClick={() => login({ username: "demo", password: "demo" })}>Connexion</button>;
@@ -39,20 +40,15 @@ export function ProfileButton() {
 }
 ```
 
-## Hook de protection
+## Hooks
 
-```tsx
-import { useRequireAuth } from "@shinederu/auth-react";
+- `useAuth()`
+- `useAuthClient()`
+- `useRequireAuth({ onUnauthenticated })`
 
-useRequireAuth({
-  onUnauthenticated: () => {
-    // ex: navigate("/")
-  },
-});
-```
-
-## Build
+## Scripts
 
 ```bash
 npm run build
+npm run clean
 ```
