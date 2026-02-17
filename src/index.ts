@@ -1,4 +1,4 @@
-﻿export { AuthProvider, useAuth, useAuthClient } from "./AuthProvider";
-export { useRequireAuth } from "./useRequireAuth";
-export type { AuthProviderProps } from "./AuthProvider";
-export type { UseRequireAuthOptions } from "./useRequireAuth";
+﻿export { AuthProvider, useAuth, useAuthClient } from "./AuthProvider.js";
+export { useRequireAuth } from "./useRequireAuth.js";
+export type { AuthProviderProps } from "./AuthProvider.js";
+export type { UseRequireAuthOptions } from "./useRequireAuth.js";

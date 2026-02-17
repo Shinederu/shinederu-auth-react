@@ -1,5 +1,5 @@
 ﻿import { useEffect } from "react";
-import { useAuth } from "./AuthProvider";
+import { useAuth } from "./AuthProvider.js";
 
 export type UseRequireAuthOptions = {
   onUnauthenticated?: () => void;
