@@ -54,11 +54,20 @@ export const useAuthClient = (): AuthContextValue => {
 
 export const useAuth = () => {
   const { client, state, refreshMe, restoreSession } = useAuthClient();
+  const rawIsAdmin = state.session.user?.is_admin;
+  const role = String(state.session.user?.role ?? "").toLowerCase();
+  const isAdmin =
+    rawIsAdmin === true ||
+    rawIsAdmin === 1 ||
+    rawIsAdmin === "1" ||
+    String(rawIsAdmin ?? "").toLowerCase() === "true" ||
+    role === "admin";
 
   return {
     state,
     session: state.session,
     user: state.session.user,
+    isAdmin,
     isAuthenticated: state.session.isAuthenticated,
     isLoading: state.isLoading,
     error: state.error,
@@ -69,6 +78,7 @@ export const useAuth = () => {
     login: client.login.bind(client),
     register: client.register.bind(client),
     me: client.me.bind(client),
+    listUsers: client.listUsers.bind(client),
     logout: client.logout.bind(client),
     logoutAll: client.logoutAll.bind(client),
     requestPasswordReset: client.requestPasswordReset.bind(client),
@@ -80,6 +90,7 @@ export const useAuth = () => {
     revokeEmailUpdate: client.revokeEmailUpdate.bind(client),
     updateProfile: client.updateProfile.bind(client),
     updateAvatar: client.updateAvatar.bind(client),
+    updateUserRole: client.updateUserRole.bind(client),
     deleteAccount: client.deleteAccount.bind(client),
     invoke: client.invoke.bind(client),
   };
