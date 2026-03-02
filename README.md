@@ -1,4 +1,4 @@
-﻿# @shinederu/auth-react
+# @shinederu/auth-react
 
 Bindings React pour `@shinederu/auth-core`.
 
@@ -15,7 +15,7 @@ import { createAuthClient } from "@shinederu/auth-core";
 import { AuthProvider } from "@shinederu/auth-react";
 
 const authClient = createAuthClient({
-  baseUrl: "https://api.shinederu.lol/auth/index.php",
+  baseUrl: "https://api.shinederu.ch/auth/index.php",
   defaultCredentials: "include",
 });
 
