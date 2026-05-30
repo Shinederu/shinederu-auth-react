@@ -46,6 +46,11 @@ function AccountButton() {
 - `useAuthClient()`
 - `useRequireAuth({ onUnauthenticated })`
 
+## Droits projet
+
+`useAuth()` expose le `user` renvoye par `@shinederu/auth-core`, donc aussi `user.project_access` quand l'API Auth le fournit.
+Les verifications metier critiques doivent rester cote backend; les frontends peuvent seulement s'en servir pour afficher ou masquer des vues.
+
 ## Scripts
 
 ```bash
