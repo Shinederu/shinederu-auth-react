@@ -23,7 +23,7 @@
     "react": ">=18"
   },
   "dependencies": {
-    "@shinederu/auth-core": "git+https://github.com/Shinederu/shinederu-auth-core.git"
+    "@shinederu/auth-core": "git+https://github.com/Shinederu/Module-Auth-Core.git"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",

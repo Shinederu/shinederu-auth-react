@@ -12,7 +12,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@shinederu/auth-core": ["../shinederu-auth-core/src/index.ts"]
+      "@shinederu/auth-core": ["../Module-Auth-Core/src/index.ts"]
     },
     "noEmitOnError": true
   },
